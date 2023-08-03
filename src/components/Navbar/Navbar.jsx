@@ -1,5 +1,5 @@
 import { nanoid } from "nanoid";
-import { useContext, useEffect } from "react";
+import { useContext } from "react";
 import { ScreenContext } from "../../App";
 import Contacts from "../Footer/Contacts";
 import ButtonNavbar from "./ButtonNavbar";
@@ -20,9 +20,9 @@ function NavBar() {
     <nav
       className={`${
         isMobile
-          ? `text-[0.8rem] gap-3 place-content-center px-2 h-[3rem]`
+          ? `text-[0.8rem] gap-3 place-content-center px-2 h-[3rem] bg-black`
           : `bg-transparent h-[16vh] items-center`
-      } w-full  text-white font-light flex`}
+      } w-full  text-white font-light flex relative z-10`}
     >
       {isMobile ? (
         ""

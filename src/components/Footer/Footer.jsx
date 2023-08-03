@@ -22,7 +22,7 @@ function Footer() {
   const isMobile = useContext(ScreenContext);
 
   return (
-    <footer className="pl-4  flex flex-col text-white bg-black text-[14px] md:mt-14">
+    <footer className="relative z-10 pl-4 flex flex-col text-white bg-black md:bg-transparent text-[14px] md:mt-14">
       <div className=" md:pl-0 pt-4 h-content flex flex-col md:flex-row md:gap-16">
         <section className="flex flex-col gap-2 py-2">
           <h1 className="text-[#656566] font-bold text-[12px] pb-1">

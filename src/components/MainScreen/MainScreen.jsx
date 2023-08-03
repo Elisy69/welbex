@@ -29,7 +29,7 @@ function MainScreen() {
   const isMobile = useContext(ScreenContext);
 
   return (
-    <div className="text-[#E4E5EA] h-[451px] md:h-content w-full bg-transparent text-[18px] flex pl-6 md:pl-0 pr-14 md:pr-0 gap-4">
+    <div className="relative z-10 text-[#E4E5EA] h-[451px] md:h-content w-full md:bg-transperent glass text-[18px] flex pl-6 md:pl-0 pr-14 md:pr-0 gap-4">
       <div className="w-full h-full flex md:flex-row flex-col justify-center  md:justify-between">
         <div className="md:w-[21rem] md:mt-16">
           <span className="text-[36px] md:text-[48px] font-normal leading-10">

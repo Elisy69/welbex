@@ -1,8 +1,10 @@
+import { nanoid } from "nanoid";
 import { createContext, useEffect, useState } from "react";
 import Circle from "./components/Circle/Circle";
 import Footer from "./components/Footer/Footer";
 import MainScreen from "./components/MainScreen/MainScreen";
 import NavBar from "./components/Navbar/Navbar";
+import { circles } from "./constants/circles";
 
 export const ScreenContext = createContext(null);
 function App() {
@@ -20,17 +22,15 @@ function App() {
     <div
       className={`${
         isMobile ? `` : `px-[8vw]`
-      } relative w-full h-full bg-black`}
+      }  w-full h-full bg-black relative overflow-hidden`}
     >
       <ScreenContext.Provider value={isMobile}>
         <NavBar />
         <MainScreen />
         <Footer />
-        <Circle circleNum={"circle_1"} />
-        <Circle circleNum={"circle_2"} />
-        <Circle circleNum={"circle_3"} />
-        <Circle circleNum={"circle_4"} />
-        <Circle circleNum={"circle_5"} />
+        {circles.map((item) => (
+          <Circle key={nanoid()} circleNum={item} />
+        ))}
       </ScreenContext.Provider>
     </div>
   );
